@@ -3,7 +3,7 @@ public abstract class HTMLHelper
 	/*
 	* Permit to convert html text to plain text
 	*/
-	public static String convertFromHTML(String chaine, boolean isSpecial)
+	public static String convertFromHTML(String chaine)
 	{
 		return chaine.replace("&eacute;", "é").replace("&egrave;", "è").replace("&agrave;", "à")
 				.replace("&ecirc;", "ê").replace("&ocirc;", "ô")
