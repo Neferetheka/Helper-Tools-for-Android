@@ -1,5 +1,3 @@
-package com.aerilys.geowarfare.android.tools;
-
 public abstract class Strings
 {
 	/*
