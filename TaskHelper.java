@@ -25,4 +25,14 @@ public abstract class TaskHelper
 		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(lien));
 		activity.startActivity(intent);	
 	}
+	
+	/*
+	 * Permit to launch market at app page
+	 */
+	public static void marketplaceTask(Context context)
+	{
+		Uri uri = Uri.parse("market://details?id="+context.getPackageName());
+		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+		context.startActivity(intent);
+	}
 }
