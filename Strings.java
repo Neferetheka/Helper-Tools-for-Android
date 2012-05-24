@@ -14,7 +14,7 @@ public abstract class Strings
 	*/
 	public static String pluralize(String string, int count)
 	{
-		return (count <= 1) ? string+"s" : string;											
+		return (count > 1) ? string+"s" : string;											
 	}
 	
 	/*
