@@ -1,5 +1,3 @@
-package com.aerilys.appheros.android.tools;
-
 import com.aerilys.appheros.android.R;
 
 import android.annotation.TargetApi;
