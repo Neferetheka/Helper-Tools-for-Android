@@ -1,5 +1,11 @@
+package com.aerilys.appheros.android.tools;
+
+import com.aerilys.appheros.android.R;
+
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Notification;
+import android.app.Notification.Builder;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -16,6 +22,7 @@ public abstract class UIHelper
 	}
 
 	/* Permit to make status bar notification */
+	@SuppressWarnings("deprecation")
 	public static void statusBarNotification(Context context, String title, String message, Intent intent)
 	{
 		String ns = Context.NOTIFICATION_SERVICE;
@@ -32,6 +39,23 @@ public abstract class UIHelper
 
 		notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);
 		mNotificationManager.notify(1, notification);
+	}
+	
+	@TargetApi(16)
+	public static void statusBarNotificationForJellyBeans(Context context, String title, String message, Intent intent)
+	{
+		String ns = Context.NOTIFICATION_SERVICE;
+		NotificationManager mNotificationManager = (NotificationManager) context.getSystemService(ns);
+
+		int icon = R.drawable.ic_launcher;
+
+		Notification.Builder builder = new Builder(context);
+		PendingIntent contentIntent = PendingIntent.getActivity(context, 0, intent, 0);
+
+		builder.addAction(icon, title, contentIntent);
+		builder.setContentTitle(title);
+		builder.setContentText(message);
+		mNotificationManager.notify(1, builder.build());
 	}
 
 	/* Permit to display a classic alert dialog */
