@@ -1,5 +1,3 @@
-import com.aerilys.appheros.android.R;
-
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Notification;
