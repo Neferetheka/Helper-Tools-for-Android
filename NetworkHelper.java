@@ -30,6 +30,7 @@ public abstract class NetworkHelper
 	 */
 	public static String HttpRequest(String url)
 	{
+		url = url.replace(" ", "%20%");
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(url);
 		
@@ -75,6 +76,7 @@ public abstract class NetworkHelper
 	 */
 	public static String HttpRequest(String url, HashMap<String, String> postParameters)
 	{
+		url = url.replace(" ", "%20%");
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpPost httpPost = new HttpPost(url);
 		HttpResponse response = null;
