@@ -43,7 +43,7 @@ public abstract class NetworkHelper
 			{
 				try
 				{
-					String responseString = EntityUtils.toString(entity);
+					String responseString = EntityUtils.toString(entity, "UTF-8");
 					return responseString;
 				}
 				catch (ParseException e)
