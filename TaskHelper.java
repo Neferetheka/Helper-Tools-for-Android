@@ -5,7 +5,7 @@ import android.content.Context;
 public abstract class TaskHelper
 {
 	/*
-	 * Permit to launch a share intent
+	 * Permits to launch a share intent
 	 */
 	public static void shareTask(Context context, String title, String content)
 	{
@@ -18,7 +18,7 @@ public abstract class TaskHelper
 	}
 
 	/*
-	 * Permit to launch a webbrowser intent
+	 * Permits to launch a webbrowser intent
 	 */
 	public static void browserTask(Context context, String link)
 	{
@@ -27,11 +27,19 @@ public abstract class TaskHelper
 	}
 	
 	/*
-	 * Permit to launch market at app page
+	 * Permits to launch market at app page
 	 */
 	public static void marketplaceTask(Context context)
 	{
-		Uri uri = Uri.parse("market://details?id="+context.getPackageName());
+		marketplaceTask(context, context.getPackageName());
+	}
+	
+	/*
+	 * Permits to launch market on a specific app
+	 */
+	public static void marketplaceTask(Context context, String packageName)
+	{
+		Uri uri = Uri.parse("market://details?id="+packageName);
 		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 		context.startActivity(intent);
 	}
