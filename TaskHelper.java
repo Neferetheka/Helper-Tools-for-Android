@@ -39,8 +39,22 @@ public abstract class TaskHelper
 	 */
 	public static void marketplaceTask(Context context, String packageName)
 	{
-		Uri uri = Uri.parse("market://details?id="+packageName);
-		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-		context.startActivity(intent);
+		try
+		{
+			if (!android.os.Build.MANUFACTURER.equals("Amazon"))
+			{
+				Uri uri = Uri.parse("market://details?id="+packageName);
+				Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+				context.startActivity(intent);
+			}
+			else
+			{
+				TaskHelper.browserTask(context, "http://www.amazon.com/gp/mas/dl/android?p=" + packageName);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 }
