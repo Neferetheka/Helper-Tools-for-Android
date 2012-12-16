@@ -9,6 +9,6 @@ public class RandomExtension extends Random
 	*/
 	public int nextInt(int min, int max)
 	{
-		return min + (int)(Math.random()*max);
+		return min + (int)(Math.random()*(max - min));
 	}
 }
