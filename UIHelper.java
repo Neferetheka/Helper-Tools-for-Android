@@ -18,7 +18,7 @@ public abstract class UIHelper
 	}
 	
 	/* Permits to make toast notification without length argument*/
-	public static void toast(Context context, String message, boolean islong)
+	public static void toast(Context context, String message)
 	{
 		toast(context, message, true);
 	}
