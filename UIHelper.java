@@ -11,13 +11,19 @@ import android.widget.Toast;
 
 public abstract class UIHelper
 {
-	/* Permit to make toast notification */
+	/* Permits to make toast notification */
 	public static void toast(Context context, String message, boolean islong)
 	{
 		Toast.makeText(context, message, (islong) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT).show();
 	}
+	
+	/* Permits to make toast notification without length argument*/
+	public static void toast(Context context, String message, boolean islong)
+	{
+		toast(context, message, true);
+	}
 
-	/* Permit to make status bar notification */
+	/* Permits to make status bar notification */
 	@SuppressWarnings("deprecation")
 	public static void statusBarNotification(Context context, String title, String message, Intent intent)
 	{
@@ -54,7 +60,7 @@ public abstract class UIHelper
 		mNotificationManager.notify(1, builder.build());
 	}
 
-	/* Permit to display a classic alert dialog */
+	/* Permits to display a classic alert dialog */
 	public static void alertDialog(Context context, String message, String titre)
 	{
 		AlertDialog.Builder dialog = new AlertDialog.Builder(context);
@@ -64,7 +70,7 @@ public abstract class UIHelper
 	}
 
 	/* 
-	 * Permit to display a classic alert dialog with default title
+	 * Permits to display a classic alert dialog with default title
 	 */
 	public static void alertDialog(Context context, String message)
 	{
@@ -72,7 +78,7 @@ public abstract class UIHelper
 	}
 
 	/*
-	 * Permit to detect tablet
+	 * Permits to detect tablet
 	 */
 	public static boolean isTablet(Context context)
 	{
