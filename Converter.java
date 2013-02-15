@@ -3,11 +3,11 @@ public abstract class Converter
 	/*
 	* Generic method for parse strings
 	*/
-	public static int ctI(String chaine)
+	public static int ctI(String toConvert)
 	{
 		try
 		{
-			return parseInt(chaine);
+			return parseInt(toConvert);
 		}
 		catch (Exception e)
 		{
