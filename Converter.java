@@ -63,7 +63,7 @@ public abstract class Converter
 	}
 	
 	/*
-	* Permit to convert String to boolean
+	* Permits to convert String to boolean
 	*/
 	public static boolean convertStringToBool(String textContent)
 	{
@@ -71,5 +71,19 @@ public abstract class Converter
 			return true;
 		else
 			return false;
+	}
+	
+	/*
+	*Permits to convert a time in seconds in minutes and seconds, as a String
+	*/
+	public static String formatSecondsCount(int duration)
+	{
+		StringBuilder sb = new StringBuilder();
+		int minutes = duration/60;
+		int seconds = duration % 60;
+		sb.append(minutes);
+		sb.append("m");
+		sb.append(seconds);
+		return sb.toString();
 	}
 }
