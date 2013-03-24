@@ -48,7 +48,7 @@ public abstract class UIHelper
 	}
 
 	/* Allows to make status bar notification not clearable by user */
-	public static <T> void statusBarNotificationRemaining(Context context, String title, String message)
+	public static void statusBarNotificationRemaining(Context context, String title, String message)
 	{
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
 				.setSmallIcon(R.drawable.ic_launcher).setContentTitle(title).setContentText(message)
