@@ -11,13 +11,13 @@ import android.widget.Toast;
 
 public abstract class UIHelper
 {
-	/* Permits to make toast notification */
+	/* Allows to make toast notification */
 	public static void toast(Context context, String message, boolean islong)
 	{
 		Toast.makeText(context, message, (islong) ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT).show();
 	}
 
-	/* Permits to make toast notification without length argument */
+	/* Allows to make toast notification without length argument */
 	public static void toast(Context context, String message)
 	{
 		toast(context, message, true);
@@ -61,7 +61,7 @@ public abstract class UIHelper
 		notificationManager.notify(0, notification);
 	}
 
-	/* Permits to display a classic alert dialog */
+	/* Allows to display a classic alert dialog */
 	public static void alertDialog(Context context, String message, String title)
 	{
 		AlertDialog.Builder dialog = new AlertDialog.Builder(context);
@@ -70,13 +70,13 @@ public abstract class UIHelper
 		dialog.show();
 	}
 
-	/* Permits to display a classic alert dialog with default title */
+	/* Allows to display a classic alert dialog with default title */
 	public static void alertDialog(Context context, String message)
 	{
 		alertDialog(context, message, "Message");
 	}
 
-	/* Permits to detect tablet */
+	/* Allows to detect tablet */
 	public static boolean isTablet(Context context)
 	{
 		try
