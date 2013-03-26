@@ -23,7 +23,7 @@ public abstract class UIHelper
 		toast(context, message, true);
 	}
 
-	/* Allows to make status bar notification */
+/* Allows to make status bar notification */
 	public static void statusBarNotification(Context context, String title, String message, Intent intent,
 			Class<?> parent)
 	{
@@ -31,7 +31,7 @@ public abstract class UIHelper
 		        new NotificationCompat.Builder(context)
 		        .setSmallIcon(R.drawable.ic_launcher)
 		        .setContentTitle(title)
-		        .setContentText(message).setOngoing(true);
+		        .setContentText(message);
 
 		TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
 		stackBuilder.addParentStack(parent);
@@ -52,7 +52,7 @@ public abstract class UIHelper
 	{
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
 				.setSmallIcon(R.drawable.ic_launcher).setContentTitle(title).setContentText(message)
-				.setAutoCancel(false).setOngoing(false);
+				.setAutoCancel(false).setOngoing(true);
 
 		NotificationManager notificationManager = (NotificationManager) context
 				.getSystemService(Context.NOTIFICATION_SERVICE);	
