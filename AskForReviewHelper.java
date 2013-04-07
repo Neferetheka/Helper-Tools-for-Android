@@ -52,7 +52,7 @@ public class AskForReviewHelper
 	private void askForReview()
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(context);
-		builder.setTitle(R.string.review_the_app).setMessage("If you like the application please review it on the Play Store!");
+		builder.setTitle("Reviews the app").setMessage("If you like the application please review it on the Play Store!");
 		builder.setNegativeButton("No thanks", new DialogInterface.OnClickListener(){
 
 				public void onClick(DialogInterface p1, int p2)
@@ -65,7 +65,7 @@ public class AskForReviewHelper
 				{
 					;
 				}
-			}).setPositiveButton("Yes sture", new DialogInterface.OnClickListener(){
+			}).setPositiveButton("Yes sure", new DialogInterface.OnClickListener(){
 
 				public void onClick(DialogInterface p1, int p2)
 				{
