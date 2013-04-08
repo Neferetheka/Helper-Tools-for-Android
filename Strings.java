@@ -40,7 +40,7 @@ public abstract class Strings
 			sb.append(separator);
 		}
 		String result = sb.toString();
-		result = result.substring(0, result.length() - 2);
+		result = result.substring(0, result.length() - 1);
 		return result;
 	}
 	
@@ -56,7 +56,7 @@ public abstract class Strings
 			sb.append(separator);
 		}
 		String result = sb.toString();
-		result = result.substring(0, result.length() - 2);
+		result = result.substring(0, result.length() - 1);
 		return result;
 	}
 }
