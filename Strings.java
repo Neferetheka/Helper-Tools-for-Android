@@ -1,3 +1,5 @@
+import java.util.List;
+
 public abstract class Strings
 {
 	/*
@@ -27,15 +29,33 @@ public abstract class Strings
 	}
 	
 	/*
-	 * Merges an string array into a single string with the specified separator
+	 * Merges a string array into a single string with the specified separator
 	 */
 	public static String mergeArray(String[] strings, String separator)
 	{
-		String result = "";
+		StringBuilder sb = new StringBuilder();
 		for (String string : strings)
 		{
-			result += string + separator;
+			sb.append(string);
+			sb.append(separator);
 		}
+		String result = sb.toString();
+		result = result.substring(0, result.length() - 2);
+		return result;
+	}
+	
+	/*
+	 * Merges a string List into a single string with the specified separator
+	 */
+	public static String mergeArray(List<String> strings, String separator)
+	{
+		StringBuilder sb = new StringBuilder();
+		for (String string : strings)
+		{
+			sb.append(string);
+			sb.append(separator);
+		}
+		String result = sb.toString();
 		result = result.substring(0, result.length() - 2);
 		return result;
 	}
