@@ -24,12 +24,12 @@ public abstract class UIHelper
 	}
 
 /* Allows to make status bar notification */
-	public static void statusBarNotification(Context context, String title, String message, Intent intent,
+	public static void statusBarNotification(Context context, int icon, String title, String message, Intent intent,
 			Class<?> parent)
 	{
 		NotificationCompat.Builder mBuilder =
 		        new NotificationCompat.Builder(context)
-		        .setSmallIcon(R.drawable.ic_launcher)
+		        .setSmallIcon(icon)
 		        .setContentTitle(title)
 		        .setContentText(message);
 
@@ -48,10 +48,10 @@ public abstract class UIHelper
 	}
 
 	/* Allows to make status bar notification not clearable by user */
-	public static void statusBarNotificationRemaining(Context context, String title, String message)
+	public static void statusBarNotificationRemaining(Context context, int icon, String title, String message)
 	{
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
-				.setSmallIcon(R.drawable.ic_launcher).setContentTitle(title).setContentText(message)
+				.setSmallIcon(icon).setContentTitle(title).setContentText(message)
 				.setAutoCancel(false).setOngoing(true);
 
 		NotificationManager notificationManager = (NotificationManager) context

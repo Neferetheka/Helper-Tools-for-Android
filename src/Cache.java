@@ -2,9 +2,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+@SuppressLint("SimpleDateFormat")
 public abstract class Cache
 {
 	private static SharedPreferences prefs;
@@ -49,6 +51,6 @@ public abstract class Cache
 	private static void getPrefs(Context context)
 	{
 		if (prefs == null)
-			prefs = context.getSharedPreferences("cache", Context.MODE_WORLD_READABLE);
+			prefs = context.getSharedPreferences("cache", Context.MODE_PRIVATE);
 	}
 }
