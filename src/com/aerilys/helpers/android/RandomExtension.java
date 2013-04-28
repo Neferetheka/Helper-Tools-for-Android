@@ -12,4 +12,14 @@ public class RandomExtension extends Random
 	{
 		return min + (int)(Math.random()*(max - min));
 	}
+	
+	public String generateRandomString(int length)
+	{
+		String alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		StringBuilder sb = new StringBuilder(length);
+		for (int i = 0; i < length; i++)
+			sb.append(alphabet.charAt(nextInt(alphabet.length())));
+		return sb.toString();
+	}
 }
