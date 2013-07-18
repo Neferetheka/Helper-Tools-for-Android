@@ -29,7 +29,7 @@ public abstract class NetworkHelper
 	 * returns the result
 	 * You may put it in a thread
 	 */
-	public static String HttpRequest(String url)
+	public static String httpRequest(String url)
 	{
 		url = url.replace(" ", "%20%");
 		DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -75,7 +75,7 @@ public abstract class NetworkHelper
 	/*
 	 * Makes a POST http request
 	 */
-	public static String HttpRequest(String url, HashMap<String, String> postParameters)
+	public static String httpRequest(String url, Map<String, String> postParameters)
 	{
 		url = url.replace(" ", "%20%");
 		DefaultHttpClient httpClient = new DefaultHttpClient();
