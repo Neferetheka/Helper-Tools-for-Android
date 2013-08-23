@@ -31,7 +31,7 @@ public abstract class NetworkHelper
 	 */
 	public static String httpRequest(String url)
 	{
-		url = url.replace(" ", "%20%");
+		url = url.replace(" ", "%20");
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(url);
 		
