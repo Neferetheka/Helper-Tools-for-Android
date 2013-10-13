@@ -58,4 +58,17 @@ public abstract class TaskHelper
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Launch an app with the provided package name
+	 * If the app is not present on the device, the Play store is opened
+	 */
+	public static void launchApp(Context context, String packageName)
+	{
+		Intent launchIntent = context.getPackageManager().getLaunchIntentForPackage(packageName);
+		if (launchIntent != null)
+			context.startActivity(launchIntent);
+		else
+			TaskHelper.marketplaceTask(context, packageName);
+	}
 }
