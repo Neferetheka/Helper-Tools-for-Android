@@ -77,7 +77,7 @@ public final class NetworkHelper
 	 */
 	public static String httpRequest(String url, Map<String, String> postParameters)
 	{
-		url = url.replace(" ", "%20%");
+		url = url.replace(" ", "%20");
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpPost httpPost = new HttpPost(url);
 		HttpResponse response = null;
