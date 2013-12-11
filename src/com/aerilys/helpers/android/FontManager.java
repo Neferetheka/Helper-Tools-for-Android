@@ -2,7 +2,7 @@ package com.aerilys.helpers.android;
 import android.content.Context;
 import android.graphics.Typeface;
 
-public abstract class FontManager
+public final class FontManager
 {
 	public static Typeface Roboto;
 		

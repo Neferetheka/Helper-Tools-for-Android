@@ -2,7 +2,7 @@ package com.aerilys.helpers.android;
 import android.app.Activity;
 import android.content.Intent;
 
-public abstract class TabManager
+public final class TabManager
 {
 	/*
 	* Launch an intent 

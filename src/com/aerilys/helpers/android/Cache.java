@@ -8,7 +8,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 @SuppressLint("SimpleDateFormat")
-public abstract class Cache
+public final class Cache
 {
 	private static SharedPreferences prefs;
 

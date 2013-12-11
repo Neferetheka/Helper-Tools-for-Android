@@ -1,7 +1,8 @@
 package com.aerilys.helpers.android;
 import java.util.List;
+import java.util.Locale;
 
-public abstract class Strings
+public final class Strings
 {
 	/*
 	* Universal method to detect a null or empty string
@@ -26,7 +27,7 @@ public abstract class Strings
 	 */
 	public static String ucfirst(String string)
 	{
-		return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
+		return string.substring(0, 1).toUpperCase(Locale.US) + string.substring(1).toLowerCase(Locale.US);
 	}
 	
 	/*

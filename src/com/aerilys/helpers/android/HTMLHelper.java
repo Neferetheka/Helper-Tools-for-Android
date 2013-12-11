@@ -1,8 +1,8 @@
 package com.aerilys.helpers.android;
-public abstract class HTMLHelper
+public final class HTMLHelper
 {
 	/*
-	* Permit to convert html text to plain text
+	* Allow to convert html text to plain text
 	*/
 	public static String convertFromHTML(String chaine)
 	{

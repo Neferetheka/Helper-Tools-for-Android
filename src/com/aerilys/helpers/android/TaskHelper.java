@@ -3,10 +3,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.content.Context;
 
-public abstract class TaskHelper
+public final class TaskHelper
 {
 	/*
-	 * Permits to launch a share intent
+	 * Allow to launch a share intent
 	 */
 	public static void shareTask(Context context, String title, String content)
 	{
@@ -19,7 +19,7 @@ public abstract class TaskHelper
 	}
 
 	/*
-	 * Permits to launch a webbrowser intent
+	 * Allow to launch a webbrowser intent
 	 */
 	public static void browserTask(Context context, String link)
 	{
@@ -28,7 +28,7 @@ public abstract class TaskHelper
 	}
 	
 	/*
-	 * Permits to launch market at app page
+	 * Allow to launch market at app page
 	 */
 	public static void marketplaceTask(Context context)
 	{
@@ -36,7 +36,7 @@ public abstract class TaskHelper
 	}
 	
 	/*
-	 * Permits to launch market on a specific app
+	 * Allow to launch market on a specific app
 	 */
 	public static void marketplaceTask(Context context, String packageName)
 	{

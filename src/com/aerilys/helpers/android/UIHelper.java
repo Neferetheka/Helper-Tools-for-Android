@@ -11,7 +11,7 @@ import android.support.v4.app.TaskStackBuilder;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
-public abstract class UIHelper
+public final class UIHelper
 {
 	/* Allows to make toast notification */
 	public static void toast(Context context, String message, boolean islong)

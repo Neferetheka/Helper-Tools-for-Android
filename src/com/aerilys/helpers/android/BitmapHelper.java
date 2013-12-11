@@ -6,7 +6,7 @@ import android.graphics.BitmapFactory;
 /*
 * Special class to create and resize bitmaps on the go	
 */
-public abstract class BitmapHelper
+public final class BitmapHelper
 {
 	public static int calculateSize(BitmapFactory.Options options, int reqWidth, int reqHeight)
 	{

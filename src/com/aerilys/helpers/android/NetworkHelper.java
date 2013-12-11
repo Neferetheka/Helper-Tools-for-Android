@@ -22,7 +22,7 @@ import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 import android.util.Log;
 
-public abstract class NetworkHelper
+public final class NetworkHelper
 {
 		/*
 	 * Makes a GET http request

@@ -1,5 +1,5 @@
 package com.aerilys.helpers.android;
-public abstract class Converter
+public final class Converter
 {
 	/*
 	* Generic method for parse strings
