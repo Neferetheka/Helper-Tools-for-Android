@@ -13,8 +13,7 @@ public final class TaskHelper
 		Intent intent = new Intent(android.content.Intent.ACTION_SEND);
 		intent.setType("text/plain");
 		intent.putExtra(Intent.EXTRA_SUBJECT, title);
-		intent.putExtra(Intent.EXTRA_TEXT, content
-				+ " - via MyApp");
+		intent.putExtra(Intent.EXTRA_TEXT, content);
 		context.startActivity(Intent.createChooser(intent, title));
 	}
 
