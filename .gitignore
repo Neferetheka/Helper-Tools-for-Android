@@ -28,3 +28,4 @@ proguard/
 .idea/
 
 .apt_generated/
+bin/helpertoolsforandroid.jar
