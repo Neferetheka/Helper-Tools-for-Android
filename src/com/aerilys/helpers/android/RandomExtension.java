@@ -20,6 +20,11 @@ public abstract class RandomExtension extends Random
 		return min + (int)(Math.random()*(max - min));
 	}
 	
+	public static double nextDouble(double min, double max)
+	{
+		return min + (double)(Math.random()*(max - min));
+	}
+	
 	public static String generateRandomString(int length)
 	{
 		String alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
