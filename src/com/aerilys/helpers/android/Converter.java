@@ -2,7 +2,7 @@ package com.aerilys.helpers.android;
 public final class Converter
 {
 	/*
-	* Generic method for parse strings
+	* Generic method to parse strings
 	*/
 	public static int ctI(String toConvert)
 	{
@@ -17,10 +17,10 @@ public final class Converter
 		}
 	}
 
-	/* Permit to convert String to int Code from
+	/* Allows to convert String to int Code from
 	 * https://github.com/nasa/World-Wind
 	 * -Java/blob/master/WorldWind/src/org/codehaus/jackson/io/NumberInput.java
-	 * NASA Code \o/ "Houston, we've got a problem" */
+	*/
 	public final static int parseInt(String chaine)
 	{
 		char[] digitChars = chaine.toCharArray();
@@ -64,7 +64,7 @@ public final class Converter
 	}
 	
 	/*
-	* Permits to convert String to boolean
+	* Allows to convert String to boolean
 	*/
 	public static boolean convertStringToBool(String textContent)
 	{
@@ -75,7 +75,7 @@ public final class Converter
 	}
 	
 	/*
-	*Permits to convert a time in seconds in minutes and seconds, as a String
+	*Allows to convert a time in seconds in minutes and seconds, as a String
 	*/
 	public static String formatSecondsCount(int duration)
 	{
