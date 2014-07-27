@@ -76,4 +76,19 @@ public final class PrefsManager
 		}
 		return false;
 	}
+	
+	public static boolean removeAtKey(String key)
+	{
+		try
+		{
+			SharedPreferences.Editor editor = sPrefs.edit();
+			editor.remove(key);
+			return editor.commit();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		return false;
+	}
 }
