@@ -1,9 +1,14 @@
 package com.aerilys.helpers.android;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 public final class Converter
 {
-	/*
-	* Generic method to parse strings
-	*/
+	/* Generic method to parse strings */
 	public static int ctI(String toConvert)
 	{
 		try
@@ -19,8 +24,7 @@ public final class Converter
 
 	/* Allows to convert String to int Code from
 	 * https://github.com/nasa/World-Wind
-	 * -Java/blob/master/WorldWind/src/org/codehaus/jackson/io/NumberInput.java
-	*/
+	 * -Java/blob/master/WorldWind/src/org/codehaus/jackson/io/NumberInput.java */
 	public final static int parseInt(String chaine)
 	{
 		char[] digitChars = chaine.toCharArray();
@@ -62,10 +66,8 @@ public final class Converter
 		}
 		return num;
 	}
-	
-	/*
-	* Allows to convert String to boolean
-	*/
+
+	/* Allows to convert String to boolean */
 	public static boolean convertStringToBool(String textContent)
 	{
 		if (textContent.equals("true"))
@@ -73,18 +75,31 @@ public final class Converter
 		else
 			return false;
 	}
-	
-	/*
-	*Allows to convert a time in seconds in minutes and seconds, as a String
-	*/
+
+	/*Allows to convert a time in seconds in minutes and seconds, as a String */
 	public static String formatSecondsCount(int duration)
 	{
 		StringBuilder sb = new StringBuilder();
-		int minutes = duration/60;
+		int minutes = duration / 60;
 		int seconds = duration % 60;
 		sb.append(minutes);
 		sb.append("m");
 		sb.append(seconds);
 		return sb.toString();
+	}
+
+	public static byte[] serialize(Object obj) throws IOException
+	{
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		ObjectOutputStream os = new ObjectOutputStream(out);
+		os.writeObject(obj);
+		return out.toByteArray();
+	}
+
+	public static Object deserialize(byte[] data) throws IOException, ClassNotFoundException
+	{
+		ByteArrayInputStream in = new ByteArrayInputStream(data);
+		ObjectInputStream is = new ObjectInputStream(in);
+		return is.readObject();
 	}
 }
