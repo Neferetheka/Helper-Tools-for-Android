@@ -9,14 +9,13 @@ public final class PrefsManager
 
 	private static SharedPreferences sPrefs;
 
-
 	public static void init(Context context)
 	{
 		sPrefs = context.getSharedPreferences("appPrefs", Context.MODE_PRIVATE);
 
 		sIsInit = true;
 	}
-	
+
 	public static String getString(String key)
 	{
 		return getString(key, null);
@@ -76,7 +75,7 @@ public final class PrefsManager
 		}
 		return false;
 	}
-	
+
 	public static boolean removeAtKey(String key)
 	{
 		try
@@ -90,5 +89,12 @@ public final class PrefsManager
 			e.printStackTrace();
 		}
 		return false;
+	}
+
+	public static boolean clearAll()
+	{
+		SharedPreferences.Editor editor = sPrefs.edit();
+		editor.clear();
+		return editor.commit();
 	}
 }
