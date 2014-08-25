@@ -82,9 +82,9 @@ public final class Converter
 		StringBuilder sb = new StringBuilder();
 		int minutes = duration / 60;
 		int seconds = duration % 60;
-		sb.append(minutes);
+		sb.append(String.format("%02d", minutes));
 		sb.append("m");
-		sb.append(seconds);
+		sb.append(String.format("%02d", seconds));
 		return sb.toString();
 	}
 
