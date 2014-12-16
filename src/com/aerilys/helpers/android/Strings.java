@@ -84,6 +84,6 @@ public final class Strings
 			}
 		}
 		
-		return 0;
+		return similarities;
 	}
 }
