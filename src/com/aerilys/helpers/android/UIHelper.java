@@ -110,4 +110,19 @@ public final class UIHelper
 	    float dp = px / (metrics.densityDpi / 160f);
 	    return dp;
 	}
+	
+	/**
+	 * Converts sp to px
+	 * @param resources : app resources
+	 * @param sp : number of sp to convert
+	 * @return : sp value in px
+	 */
+	public static float convertSpToPixels(Resources resources, float sp){
+		final float scale = resources.getDisplayMetrics().scaledDensity;
+		return sp * scale;
+	}
+	
+	public static boolean isLandscape(Context context) {
+        	return context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+    	}
 }
