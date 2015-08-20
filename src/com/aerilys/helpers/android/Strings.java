@@ -86,4 +86,26 @@ public final class Strings
 		
 		return similarities;
 	}
+	
+	/**
+	 * Reads a string from an asset file
+	 * @param context : app context
+	 * @param path : asset file path
+	 * @return : String read from file
+	 * @throws IOException : error
+	 */
+	public static String getStringFromAssets(Context context, String path) throws IOException {
+		InputStream is = context.getAssets().open(path);
+
+		int ch;
+		StringBuilder sb = new StringBuilder();
+
+		while ((ch = is.read()) != -1) {
+			sb.append((char) ch);
+		}
+
+		String result = sb.toString();
+		is.close();
+		return result;
+	}
 }
