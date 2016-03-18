@@ -34,7 +34,7 @@ public abstract class RandomExtension extends Random
 
 		StringBuilder sb = new StringBuilder(length);
 		for (int i = 0; i < length; i++)
-			sb.append(alphabet.charAt(sNextInt(letters.length())));
+			sb.append(letters.charAt(sNextInt(letters.length())));
 		return sb.toString();
 	}
 	
