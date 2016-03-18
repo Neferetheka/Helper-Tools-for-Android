@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * A Random class extension with some nice utils methods
+ */
 public abstract class RandomExtension extends Random
 {
 	private static final long serialVersionUID = 8914228484090011478L;
@@ -27,11 +30,11 @@ public abstract class RandomExtension extends Random
 	
 	public static String generateRandomString(int length)
 	{
-		String alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		String letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 		StringBuilder sb = new StringBuilder(length);
 		for (int i = 0; i < length; i++)
-			sb.append(alphabet.charAt(RandomExtension.sNextInt(alphabet.length())));
+			sb.append(alphabet.charAt(sNextInt(letters.length())));
 		return sb.toString();
 	}
 	
